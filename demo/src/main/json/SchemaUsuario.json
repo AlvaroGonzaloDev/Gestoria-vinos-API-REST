@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Usuario",
+    "description": "Este es el usuario",
+    "type": "object",
+    "properties": {
+        "id":{
+            "description":"Identificador del usuario",
+            "type": "integer"
+        },
+        "nombre":{
+            "description":"Nombre del usuario",
+            "type": "string"
+        },
+        "fecha_de_nacimiento":{
+            "description":"Fecha de nacimiento del usuario",
+            "type":"string"
+        },
+        "correo_electronico":{
+            "description":"Correo electrónico del usuario",
+            "type": "string"
+        }
+    },
+    "required": ["id","nombre","fecha_de_nacimiento","correo_electronico"]
+}

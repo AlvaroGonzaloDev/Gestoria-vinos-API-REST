@@ -1,0 +1,57 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Vino",
+    "description": "Este es un vino",
+    "type": "object",
+    "properties": {
+        "id":{
+            "description":"Identificador del vino",
+            "type": "integer"
+        },
+        "nombre":{
+            "description":"Nombre del vino",
+            "type": "string"
+        },
+        "bodega":{
+            "description":"Bodega a la que pertenece el vino",
+            "type":"string"
+        },
+        "anio_botella":{
+            "description":"Año en el que se consecharon las uvas con las que se hizo el vino",
+            "type": "integer"
+        },
+        "origen":{
+            "description":"País o región de origen del vino",
+            "type":"string"
+        },
+        "tipo":{
+            "description":"Tipo del vino",
+            "type":"string"
+        },
+        "tipos_de_uva":{
+            "description":"Porcentaje de cada tipo de uva usado en el vino",
+            "type": "array",
+            "items":{
+                "title":"uva",
+                "description":"Uva del vino",
+                "type":"object",
+                "properties": {
+                    "nombre_uva":{
+                        "description":"Nombre de la uva",
+                        "type": "string"
+                    },
+                    "porcentaje":{
+                        "description":"Porcentaje de la uva",
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                    }
+                },
+                "required": ["nombre_uva","porcentaje"]
+            },
+            "minItems":1,
+            "uniqueItems":true
+        }
+    },
+    "required": ["id","nombre","bodega","anio_botella","origen","tipo","tipos_de_uva"]
+}

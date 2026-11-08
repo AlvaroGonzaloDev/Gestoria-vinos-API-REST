@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Seguidores de usaurio",
+    "description": "Relacion entre los usuarios de la comunidad",
+    "type": "object",
+    "properties": {
+        "id":{
+            "description":"Identificador de la petición",
+            "type": "integer"
+        },
+        "id_usuario_solicitado":{
+            "description":"Identificador del usuario solicitado",
+            "type": "integer"
+        },
+        "id_usuario_solicitante":{
+            "description":"Identificador del usuario solicitante",
+            "type": "integer"
+        },
+        "estado":{
+            "description":"Estado de la petición de seguimiento",
+            "type":"string",
+            "enum": ["aceptada","pendiente","rechazada"]
+        }
+    },
+    "required": ["id","id_usuario_solicitado","id_usuario_solicitante","estado"]
+}

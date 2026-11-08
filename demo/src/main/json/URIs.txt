@@ -1,0 +1,43 @@
+------------------------Entry-point--------------------------
+
+http://api.comunidad-vinos.com/
+
+------------------------Entry-point--------------------------
+
+------------------------Básicos------------------------------
+
+http://api.comunidad-vinos.com/vinos     GET
+
+http://api.comunidad-vinos.com/vinos/{vinos-id}   GET
+
+http://api.comunidad-vinos.com/usuarios    POST,GET(nombre)
+
+http://api.comunidad-vinos.com/usuarios/{usuarios-id}     GET(id),PUT,DELETE
+
+------------------------Básicos------------------------------
+
+------------------------Relacionales-------------------------
+
+http://api.comunidad-vinos.com/usuarios/{usuarios-id}/vinos    POST,GET
+
+http://api.comunidad-vinos.com/usuarios/{usuarios-id}/vinos/{vinos-id}   GET,DELETE,PUT
+
+http://api.comunidad-vinos.com/usuarios/{usuarios-id}/solicitados     POST,GET
+
+http://api.comunidad-vinos.com/usuarios/{usuarios-id}/solicitados/{otro-usuario-id}    GET,DELETE
+
+http://api.comunidad-vinos.com/usuarios/{usuarios-id}/solicitantes    GET
+
+http://api.comunidad-vinos.com/usuarios/{usuarios-id}/solicitantes/{otro-usuario-id}    GET
+
+http://api.comunidad-vinos.com/usuarios/{usuarios-id}/solicitantes/{otro-usuario-id}/aceptar    PUT
+
+http://api.comunidad-vinos.com/usuarios/{usuarios-id}/solicitantes/{otro-usuario-id}/rechazar    PUT
+
+http://api.comunidad-vinos.com/usuarios/{usuarios-id}/solicitantes/{otro-usuario-id}/vinos   GET solamente los que tengan en estado=aceptada
+
+http://api.comunidad-vinos.com/usuarios/{usuarios-id}/recomendaciones   GET(info personal, 5 últimos vinos añadidos, 5 vinos mejores puntuados, 5 vinos mejor puntuados de todos sus amigos)
+
+http://api.comunidad-vinos.com/usuarios/{usuarios-id}/estadisticas     GET
+
+------------------------Relacionales--------------------------
